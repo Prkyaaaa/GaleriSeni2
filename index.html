@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Seni Nusantara</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  .hero h1 {
+    color: #00ccff; /* Ganti ke warna lain seperti #FFD700 atau #EAEAEA */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.709); /* Menambahkan efek bayangan agar lebih kontras */
+  }
+  .hero p {
+    color: #00ccff;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.709); /* Agar teks deskripsi lebih menonjol */
+  }
+
+    #profil {
+      background-color: #b2edfb;
+      padding: 50px 0;
+    }
+    #profil h2 {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    #profil p {
+      color: #555;
+      line-height: 1.8;
+    }
+    #profil img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    #layanan {
+      background-color: #b2edfb;
+      padding: 50px 0;
+    }
+    #layanan h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #layanan p {
+      color: #555;
+    }
+    #layanan img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    #galeri {
+      background-color: #b2edfb; /* Background warna untuk galeri */
+      padding: 50px 0;
+    }
+    #galeri h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .hero {
+      background: url('hero-bg.jpg') no-repeat center center/cover;
+      height: 80vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Galeri Seni Nusantara</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#" onclick="showSection('beranda')">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('profil')">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('layanan')">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('galeri')">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('kontak')">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('Informasi')">Informasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+ <!-- Beranda -->
+<div id="beranda" class="section active">
+    <div class="hero d-flex flex-column justify-content-center align-items-center text-white text-center">
+      <!-- Latar Belakang Foto -->
+      <div class="bg-image position-absolute w-100 h-100" style="background-image: url('https://png.pngtree.com/background/20240413/original/pngtree-set-of-indonesia-landmark-background-candi-monument-building-design-vector-picture-image_8472929.jpg'); background-size: cover; background-position: center; z-index: -1;"></div>
+      <!-- Konten Teks -->
+      <div class="container">
+        <h1 class="fw-bold">Selamat Datang di Website Galeri Seni Nusantara</h1>
+        <p class="lead">Kami hadir untuk membawa keajaiban seni Indonesia lebih dekat kepada Anda.
+            Ayo mulai perjalanan Anda dan temukan inspirasi di setiap sudut galeri kami.</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- Profil -->
+ <div id="profil" class="section">
+    <div class="container py-5 text-center">
+      <h2 class="fw-bold mb-4">Tentang Kami</h2>
+      <p class="lead mb-4">
+        Website Galeri Seni Nusantara merupakan platform yang menghadirkan keindahan seni budaya Indonesia. Kami berdedikasi untuk melestarikan warisan budaya Nusantara melalui seni rupa, kerajinan, dan juga karya kreatif lainnya.
+      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="fw-bold">Visi</h3>
+          <p>Menghubungkan masyarakat dengan seni dan budaya Nusantara, serta melestarikan keindahan seni Indonesia untuk generasi mendatang.</p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="fw-bold">Misi</h3>
+          <ul class="text-start">
+            <li>Menyediakan platform untuk seniman lokal memamerkan karya mereka.</li>
+            <li>Meningkatkan apresiasi terhadap seni tradisional dan modern Indonesia.</li>
+            <li>Mendorong pelestarian budaya melalui pameran seni dan edukasi.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col">
+          <h3 class="fw-bold">Sejarah Singkat</h3>
+          <p>
+            Website Gallery Seni Nusantara didirikan pada tahun 2024 dengan tujuan utama untuk memperkenalkan kekayaan seni Indonesia ke dunia. Bermula dari kumpulan kecil seniman lokal, kini kami telah menjadi ruang digital yang menghubungkan karya seni dari berbagai daerah di Nusantara dengan audiens yang lebih luas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Layanan -->
+  <div id="layanan" class="section">
+    <div class="container py-5 text-center">
+      <h2 class="fw-bold mb-4">Layanan Kami</h2>
+      <p class="mb-4">Kami menyediakan berbagai layanan untuk mendukung dan mempromosikan seni Nusantara. Mulai dari pameran, edukasi, hingga koleksi karya, semua bertujuan untuk melestarikan dan memperkenalkan budaya Indonesia kepada dunia.</p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="https://suarapantau.com/wp-content/uploads/2019/01/Galeri-Nasional-Indonesia-SUARAPANTAU.COM_.jpg" alt="Pameran Seni" class="img-fluid">
+          <h4 class="mt-3">Pameran Seni</h4>
+          <p>Galeri Nasional Indonesia (GNI) luncurkan agenda program yang bisa dinikmati oleh para pecinta seni rupa sepanjang tahun 2019.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://www.unu-jogja.ac.id/wp-content/uploads/2024/08/af3bab352b3440fa9f40c01f4ecb8fd4-scaled.jpg.webp" alt="Pameran Seni" class="img-fluid">
+          <h4 class="mt-3">Pameran Seni</h4>
+          <p>Pameran seni rupa (Indonesia 100%) di Kampus Terpadu UNU Yogyakarta, Dowangan, Sleman, Daerah Istimewa Yogyakarta.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://img.antarafoto.com/cache/1200x801/2021/11/20/pameran-wayang-rupa-kita-x5kd-dom.jpg" alt="Pameran Seni" class="img-fluid">
+          <h4 class="mt-3">Pameran Seni</h4>
+          <p>Pameran wayang koleksi Bentara Budaya bertajuk Wayang Rupa Kita di Bentara Budaya Jakarta, Palmerah, Jakarta Pusat</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/04/16/kiw-368945666.png" alt="Edukasi Seni" class="img-fluid">
+          <h4 class="mt-3">Edukasi Seni</h4>
+          <p>Menyediakan workshop seni untuk meningkatkan keterampilan seni tradisional.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://img.antarafoto.com/cache/1200x799/2024/11/03/edukasi-seni-wayang-di-solo-1epjh-dom.jpg" alt="Edukasi Seni" class="img-fluid">
+          <h4 class="mt-3">Edukasi Seni</h4>
+          <p>Kelas seni modern dengan pengajar berpengalaman di bidang seni rupa.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://cdn.rri.co.id/berita/Banten/o/1732486251773-antarafoto-pementasan-teater-abdul-muluk-reborn-1732486232/e2w3mqjl7tlmunx.jpeg" alt="Edukasi Seni" class="img-fluid">
+          <h4 class="mt-3">Edukasi Seni</h4>
+          <p>Pembelajaran seni untuk anak-anak guna mengenalkan budaya sejak dini.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/lukisan-penangkapan-pangeran-diponegoro-karya-raden-saleh-menjadi-salah-satu-lukisan-.jpg" alt="Koleksi Karya" class="img-fluid">
+          <h4 class="mt-3">Koleksi Karya</h4>
+          <p>Penangkapan Pangeran Diponegoro Karya Raden Saleh</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2022/11/0715012022-Lukisan-Badai-Pasti-Berlalu-karya-Affandi-menjadi-salah-satu-lukisan-terkenal-dunia-asal-Indonesia-Good-News-From-Indonesia.jpg" alt="Koleksi Karya" class="img-fluid">
+          <h4 class="mt-3">Koleksi Karya</h4>
+          <p>Lukisan Badai Pasti Berlalu Karya Affandi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Galeri -->
+<div id="galeri" class="section">
+    <div class="container py-5">
+      <h2>Galeri Karya Seni</h2>
+      <div class="row">
+        <!-- Foto 1 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdngnfi2.sgp1.digitaloceanspaces.com/gnfi/uploads/articles/lukisan-penangkapan-pangeran-diponegoro-karya-raden-saleh-menjadi-salah-satu-lukisan-.jpg" alt="Karya Seni 1" class="img-fluid rounded shadow">
+          <p class="mt-2 text-center">Lukisan Penangkapan Pangeran Diponegoro</p>
+        </div>
+        <!-- Foto 2 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2022/11/0715012022-Lukisan-Badai-Pasti-Berlalu-karya-Affandi-menjadi-salah-satu-lukisan-terkenal-dunia-asal-Indonesia-Good-News-From-Indonesia.jpg" alt="Karya Seni 2" class="img-fluid rounded shadow">
+          <p class="mt-2 text-center">Lukisan Badai Pasti Berlalu</p>
+        </div>
+        <!-- Foto 3 -->
+        <div class="col-md-4 mb-4">
+          <img src="https://cdn1-production-images-kly.akamaized.net/hCnuNYQShsZh0Jg5R56aQLqt1PU=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4297673/original/070391300_1674225772-shutterstock_701666278.jpg" alt="Karya Seni 3" class="img-fluid rounded shadow">
+          <p class="mt-2 text-center">Wayang Kulit</p>
+        </div>
+        <!-- Foto 4 -->
+        <div class="col-md-6 mb-4">
+          <img src="https://indonesia.go.id/assets/upload/headline//1569934833_Wayang_Golek.jpg" alt="Karya Seni 4" class="img-fluid rounded shadow">
+          <p class="mt-2 text-center">Wayang Golek</p>
+        </div>
+        <!-- Foto 5 -->
+        <div class="col-md-6 mb-4">
+          <img src="https://asset.kompas.com/crops/fpxqdf-UJYQvKv9b2ig7KzFoj4g=/18x83:6116x4148/1200x800/data/photo/2022/11/03/6363f028bf392.jpg" alt="Karya Seni 5" class="img-fluid rounded shadow">
+          <p class="mt-2 text-center">Seni Ukir/Pahat</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Kontak -->
+  <div id="kontak" class="section">
+    <div class="container py-5">
+      <h2>Kontak Kami</h2>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Pesan</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Informasi -->
+  <div id="Informasi" class="section">
+    <div class="container py-5 text-center">
+      <h2 class="fw-bold mb-4">Informasi Kontak</h2>
+      <p>Untuk informasi lebih lanjut atau pertanyaan, silakan hubungi kami melalui:</p>
+      <p><strong>Nomor Telepon:</strong> +62 831 1774 9435</p>
+      <p><strong>Alamat:</strong> Jl. Kebudayaan No. 10, Jakarta, Indonesia</p>
+      <p><strong>Email:</strong>galeriseni@gmail.com</p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+  
